@@ -1,11 +1,4 @@
-## Next.js + Firebase - The Full Course
-
-- [Live Demo](https://next.fireship.io/)
-- [Enroll in the Course](https://fireship.io/courses/react-next-firebase/)
-
-Become an expert at React, Next.js, and Firebase by building a social blogging community from scratch. 
-
-Build a complex webapp inspired by sites Dev.to and Medium, featuring...
+## Next.js + Firebase + Netlify Graph
 
 - 👨‍🎤 Custom Firebase usernames
 - 📰 Bot-friendly content (SEO)
@@ -14,9 +7,7 @@ Build a complex webapp inspired by sites Dev.to and Medium, featuring...
 - ⚛️ Reactive forms with react-hook-form
 - 📂 Image file uploads
 - 💞 Realtime hearts
-- 🚀 Security & Deployment
-
-
-
+- 🚀 Security & Deployment on Netlify
+- Spotify playback and search functionality with Netlify Graph
 
 # moko-vtwo
