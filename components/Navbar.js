@@ -54,6 +54,9 @@ export default function Navbar() {
             </Link>
           </li>
         )}
+        <Link href="/SpotifySearchForm">
+          <button className="btn-blut">Search Spotify</button>
+        </Link>
       </ul>
     </nav>
   );
