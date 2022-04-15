@@ -63,15 +63,16 @@ export default function Home(props) {
       />
 
       <div className="card card-info">
-        <h2>💡 Next.js + Firebase - Netlify/ Netlify Graph</h2>
+        <h2>🎤MOKO Karaoke Netlify/ Netlify Graph</h2>
+
         <p>
           Welcome! This app is built with Next.js and Firebase and is loosely
           inspired by Dev.to. doubling as a Karaoke app! Deployed on Netlify!
         </p>
         <p>
-          Sign up for an 👨‍🎤 account, ✍️ add a song or a post, then 💞 heart
-          content created by other users. All public content is server-rendered
-          and search-engine optimized.
+          Sign up for an 👨‍🎤 account, ✍️ add a song with details, lyrics, song
+          order, then 💞 heart songs created by other users. All public content
+          is server-rendered and search-engine optimized.
         </p>
       </div>
 
