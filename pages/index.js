@@ -57,10 +57,7 @@ export default function Home(props) {
 
   return (
     <main>
-      <Metatags
-        title="Home Page"
-        description="Get the latest posts on our site"
-      />
+      <Metatags title="Home Page" description="Karaoke-Netlify Graph" />
 
       <div className="card card-info">
         <h2>🎤MOKO Karaoke Netlify/ Netlify Graph</h2>
