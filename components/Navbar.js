@@ -30,6 +30,9 @@ export default function Navbar() {
             <li className="push-left">
               <button onClick={signOut}>Sign Out</button>
             </li>
+            <Link href="/SpotifySearchForm">
+              <button className="btn-blut">Search Spotify</button>
+            </Link>
             <li>
               <Link href="/admin">
                 <button className="btn-blue">Add Song</button>

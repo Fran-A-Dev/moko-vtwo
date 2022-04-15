@@ -64,3 +64,8 @@
     position: relative;
   }
 }
+
+
+.input {
+  cursor: pointer;
+}

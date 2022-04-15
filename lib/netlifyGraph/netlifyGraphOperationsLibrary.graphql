@@ -18,8 +18,9 @@ query SpotifySearch($query: String = "Mr. Brightside") @netlify(id: """321fde78-
           name
         }
         album {
-          id
-          name
+          images {
+            url
+          }
         }
       }
     }

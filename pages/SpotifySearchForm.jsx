@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { useState } from "react";
 import { Auth } from "netlify-graph-auth";
 
+
 const { NetlifyGraphAuth } = Auth;
 
 export default function Form(props) {
@@ -35,7 +36,7 @@ export default function Form(props) {
   return (
     <div className="container">
       <Head>
-        <title>Search for a Song in Spotify</title>
+        <title>Spotify-Search form</title>
       </Head>
       <main>
         <h1>{props.title}</h1>
@@ -55,7 +56,10 @@ export default function Form(props) {
               (value) => value
             )}
           />
-          <input type="submit" />
+          
+          
+          <input className="input"type="submit" />
+         
         </form>
         {needsLoginService ? (
           <button
@@ -75,13 +79,46 @@ export default function Form(props) {
             {`Log in to ${needsLoginService}`}
           </button>
         ) : null}
-        <pre>{JSON.stringify(formVariables, null, 2)}</pre>
-        <pre>{JSON.stringify(result, null, 2)}</pre>
+        {/*<pre>{JSON.stringify(formVariables, null, 2)}</pre>
+        <pre>{JSON.stringify(result, null, 2)}</pre>*/}
+       
+
+       {result?.data.spotify?.search?.tracks.map((track) => {
+          const playOnSpotify = async (event) => {
+            event.preventDefault();
+
+            const res = await fetch('/api/PlaySong', {
+              body: JSON.stringify({ trackIds: [track.id] }),
+              headers: {
+                'Content-Type': 'application/json',
+                ...auth?.authHeaders(),
+              },
+              method: 'POST',
+            });
+
+            const formResult = await res.json();
+            console.log(formResult);
+            // setResult(formResult);
+          };
+
+          return (
+            <li key={track.id}>
+              <img
+                style={{ width: 200 }}
+                src={track.album.images[0].url}
+                alt="TKTK add album name"
+              />
+              <button onClick={playOnSpotify}>
+                {track.name} by{' '}
+                {track.artists.map((artist) => artist.name).join(', ')}
+              </button>
+            </li>
+          );
+        })}
       </main>
     </div>
   );
 }
-
 export async function getServerSideProps(context) {
   const siteId = process.env.SITE_ID;
   if (!siteId) {

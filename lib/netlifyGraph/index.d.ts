@@ -103,13 +103,14 @@ export type SpotifySearch = {
            */
           album: {
             /**
-             * The Spotify ID for the album.
+             * The cover art for the album in various sizes, widest first.
              */
-            id: string;
-            /**
-             * The name of the album. In case of an album takedown, the value may be an empty string.
-             */
-            name: string;
+            images: Array<{
+              /**
+               * The source URL of the image.
+               */
+              url: string;
+            }>;
           };
         }>;
       };
