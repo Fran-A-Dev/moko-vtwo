@@ -71,8 +71,9 @@ export default function Home(props) {
         </p>
         <p>
           Sign up for an 👨‍🎤 account, ✍️ add a song with details, lyrics, song
-          order, then 💞 heart songs created by other users. All public content
-          is server-rendered and search-engine optimized.
+          order, then 💞 heart songs created by other users and play and search
+          songs on Spotify in your admin page. All public content is
+          server-rendered and search-engine optimized.
         </p>
       </div>
 
